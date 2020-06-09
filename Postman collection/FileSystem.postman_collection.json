@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "713d060e-97cf-4766-ade7-8ea76a943644",
+		"name": "FileSystem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9003/getDirectory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9003/getDirectory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"getDirectory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9003/updateDirectory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"5edfb323b1ce23ab93b93db8\",\r\n    \"root\": {\r\n        \"name\": \"rootFolder\",\r\n        \"folderList\": [\r\n        \t{\r\n        \t\t\"name\": \"Test Folder\",\r\n\t\t        \"folderList\": [\r\n\t\t        \t{\r\n\t\t        \t\t\"name\": \"Test Folder 2\",\r\n\t\t\t\t        \"folderList\": [],\r\n\t\t\t\t        \"filesList\": [\r\n\t\t\t\t        \t{\r\n\t\t\t\t        \t\t\"name\": \"testFiles2\",\r\n\t\t\t\t        \t\t\"location\" : \"jasdhsjbahjfvbashjfvashjfvashj\"\r\n\t\t\t\t        \t}\r\n\t\t\t\t        ]\r\n\t\t        \t}\r\n\t\t        ],\r\n\t\t        \"filesList\": [\r\n\t\t                \t{\r\n\t\t\t\t        \t\t\"name\": \"testFiles1\",\r\n\t\t\t\t        \t\t\"location\" : \"jasdhsjmdksalbahjfvbashjfvashjfvashj\"\r\n\t\t\t\t        \t}\r\n\t\t        ]\r\n        \t}\r\n        ],\r\n        \"filesList\": [\r\n        \t{\r\n        \t\t\"name\": \"Sohail hobbies\",\r\n        \t\t\"location\" : \"dahdgashj\"\r\n        \t}\r\n        ]\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9003/updateDirectory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"updateDirectory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9003/getAllFiles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9003/getAllFiles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"getAllFiles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9003/addFile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "testFile",
+							"type": "text"
+						},
+						{
+							"key": "data",
+							"type": "file",
+							"src": "/D:/Gate 2020 Score Card.pdf"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9003/addFile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"addFile"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
